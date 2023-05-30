@@ -1,7 +1,6 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Navbar } from '@/components'
+import './globals.css'
 
 export const metadata = {
   title: 'Nikhil Shekhawat - portfolio',
@@ -11,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Navbar/>
+        {children}</body>
     </html>
   )
 }

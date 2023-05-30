@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=League+Spartan:wght@700&family=Lilita+One&family=Pacifico&family=Poppins:wght@200;300;400;800&family=Roboto+Condensed&family=Roboto:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,4 +20,39 @@
 
 body {
   color: rgb(5, 35, 52);
+  @apply font-roboto
+}
+
+#home{
+  background-image: url('/images/background.jpg');
+}
+
+#about{
+  background-color: rgb(245, 241, 236);
+}
+
+.links{
+  border-radius: 0 1rem 1rem 0 ;
+  top: calc(50%);
+  transform: translate(0%, -50%);
+  left: 0;
+
+}
+
+.scroll-indicator{
+  @apply flex absolute p-2 sm:bottom-40 md:bottom-16 md:h-24 md:w-12 justify-center h-16 w-10 rounded-full shadow-md bg-white scale-75
+}
+
+.scroll-indicator div{
+  animation: scroller 0.5s ease-in-out;
+}
+
+@keyframes scroller {
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: blue ;
+  }
+  
 }

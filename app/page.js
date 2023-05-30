@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import { About, Home, Projects } from '@/components'
 
-export default function Home() {
+export default function App() {
   return (
    <>
-      hello
+   <Home/>
+   <About/>
+   <Projects/>
    </>
   )
 }
