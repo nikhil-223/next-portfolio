@@ -20,10 +20,15 @@ module.exports = {
 			colors: {
 				skill: "#58d3c0",
 				skillPercentage: "#053967",
+				projectSec: "#f5faff",
+				footer: "#171921",
 			},
-			height:{
-				section: 'calc( 100vh + 1rem)'
-			}
+			height: {
+				section: "calc( 100vh + 1rem)",
+			},
+			transitionDuration: {
+				2000: "2000ms",
+			},
 		},
 		screens: {
 			sm: "330px",

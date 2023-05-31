@@ -15,7 +15,8 @@ const Skill = (props) => {
 			x: 0,
 			transition: {
 				type: "spring",
-				duration: 0.5,
+				duration: 1,
+				delay:0.2,
 			},
 		},
 	};

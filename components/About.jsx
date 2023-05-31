@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect } from "react";
+import React from "react";
 import { Skill } from "@/components";
 // import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
@@ -33,35 +33,7 @@ const About = () => {
 		{ skillName: "Framer Motion", skillPercentage: "40%" },
 	];
 
-	//intersection observer
-	useEffect(() => {
-		const cards = document.querySelectorAll("#home, #about, #projects");
-		console.log(cards);
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry, index) => {
-					if (entry.isIntersecting ===true && entry.target !== document.querySelector("#home") ) {
-						document.querySelector("#navbar").style.backgroundColor = "white";
-						document.querySelector("#navbar").style.top = "0rem";
-					} 
-					else if (
-						entry.target === document.querySelector("#home") &&
-						entry.isIntersecting === true
-					) {
-						document.querySelector("#navbar").style.top = "0.2rem";
-						document.querySelector("#navbar").style.backgroundColor =
-							"transparent";
-					}
-				});
-			},
-			{
-				threshold: 0,
-			}
-		);
-		cards.forEach((card) => {
-			observer.observe(card);
-		});
-	});
+	
 
 	return (
 		<section
@@ -132,6 +104,4 @@ const About = () => {
 	);
 };
 
-const forwardAbout = forwardRef(About);
-
-export default forwardAbout;
+export default About;

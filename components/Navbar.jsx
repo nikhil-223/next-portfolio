@@ -64,7 +64,7 @@ const Navbar = () => {
 			{/* mobile navigation menu */}
 			<ul
 				id="menu"
-				className=" fixed bottom-5 left-1/2 -translate-x-1/2 sm:flex md:hidden gap-1 p-2 px-3 bg-slate-50 rounded-full ">
+				className=" fixed bottom-5 left-1/2 -translate-x-1/2 shadow-lg sm:flex md:hidden gap-1 p-2 px-3 bg-slate-50 rounded-full ">
 				<li className="flex flex-col items-center">
 					<span className="p-2 text-xl hover:text-red-800">
 						<AiFillHome />

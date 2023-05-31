@@ -1,13 +1,12 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React, { useEffect } from "react";
 import { ImLinkedin, ImGithub, ImTwitter } from "react-icons/im";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Home = (props) => {
-
-  const { textVisible, aboutVisible } = props;
+	const { textVisible, aboutVisible } = props;
 
 	// framer motion
 	let { scrollYProgress } = useScroll();
@@ -42,12 +41,44 @@ const Home = (props) => {
 		},
 	};
 
-  return (
-		<section id="home" className="pt-12 h-section w-full">
+	//intersection observer
+	useEffect(() => {
+		const cards = document.querySelectorAll("#navtrack");
+		console.log(cards);
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry, index) => {
+					if (entry.isIntersecting === false) {
+						document.querySelector("#navbar").style.backgroundColor = "white";
+						document.querySelector("#navbar").style.top = "0rem";
+						document.querySelector("#navbar").style.boxShadow =
+							"0px -1px 10px 0px rgba(71,70,87,1)";
+						} else {
+							document.querySelector("#navbar").style.top = "0.2rem";
+							document.querySelector("#navbar").style.backgroundColor =
+							"transparent";
+							document.querySelector("#navbar").style.boxShadow =
+								"0px 0px 0px 0px rgba(71,70,87,1)";
+					}
+				});
+			},
+			{
+				threshold: 0,
+			}
+		);
+		cards.forEach((card) => {
+			observer.observe(card);
+		});
+	});
+
+	return (
+		<section id="home" className="relative pt-12 h-section w-full">
+			<div id="navtrack" className="absolute top-0 invisible text-xs">
+				navtrack
+			</div>
 			<div className="relative h-full flex flex-col p-3 justify-center items-center">
-				
-        {/* links */}
-        <div className="links h-72 flex justify-around sm:hidden md:flex flex-col absolute p-2 py-6 bg-white text-4xl">
+				{/* links */}
+				<div className="links h-72 flex justify-around sm:hidden md:flex flex-col absolute p-2 py-6 bg-white text-4xl">
 					<div className=" p-2 hover:bg-cyan-100 rounded-2xl">
 						<a
 							href="https://www.linkedin.com/in/nikhil-shekhawat-986385179"
@@ -90,7 +121,7 @@ const Home = (props) => {
 								Hey, I'm{" "}
 							</motion.h6>{" "}
 							<motion.h3
-								className="font-extrabold sm:text-5xl md:text-6xl"
+								className="text-center font-extrabold sm:text-5xl md:text-6xl"
 								variants={infoChildVariants}>
 								Nikhil Shekhawat
 							</motion.h3>{" "}
@@ -105,7 +136,7 @@ const Home = (props) => {
 						</span>
 					</motion.div>
 					<motion.div variants={infoChildVariants}>
-						<span className="w-full flex text-center sm:text-sm md:text-xl">
+						<span className="w-full flex text-center sm:text-sm md:text-xl md:px-16">
 							I specialize in creating dynamic and interactive websites
 							utilizing a range of programming languages and frameworks
 						</span>
@@ -129,6 +160,6 @@ const Home = (props) => {
 			</div>
 		</section>
 	);
-}
+};
 
-export default Home
+export default Home;
