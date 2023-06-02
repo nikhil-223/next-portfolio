@@ -11,7 +11,7 @@ const Navbar = () => {
 		<nav id="navbar" className="flex fixed items-center justify-between w-full p-1 px-5 z-50 transition">
 			<div className="flex gap-2 items-center">
 				<div className="relative w-10 h-10 rounded-full overflow-hidden">
-					<Image fill src="/images/profile.jpg" />
+					<Image fill alt="profileImage" src="/images/profile.jpg" />
 				</div>
 				<span className=" text-lg font-bold">NIKHIL SHEKHAWAT</span>
 			</div>
@@ -27,10 +27,10 @@ const Navbar = () => {
 					<a href="#about"> ABOUT</a>
 				</li>
 				<li className=" hover:text-amber-700">
-					<a href="#home"> PROJECTS</a>
+					<a href="#projects"> PROJECTS</a>
 				</li>
 				<li className=" hover:text-amber-700">
-					<a href="#home"> CONTACT</a>
+					<a href="#contact"> CONTACT</a>
 				</li>
 			</ul>
 

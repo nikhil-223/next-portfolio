@@ -44,7 +44,6 @@ const Home = (props) => {
 	//intersection observer
 	useEffect(() => {
 		const cards = document.querySelectorAll("#navtrack");
-		console.log(cards);
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry, index) => {
@@ -149,9 +148,9 @@ const Home = (props) => {
 				</motion.div>
 
 				{/* scroll  */}
-				<div className="scroll-indicator ">
-					<div className="absolute w-5 h-5 bg-black rounded-full"></div>
-				</div>
+				{/* <div className="scroll-indicator "> */}
+					{/* <div className="absolute w-5 h-5 bg-black rounded-full"></div> */}
+				{/* </div> */ }
 
 				{/* illustraion */}
 				<div className="sm:w-64 sm:h-64 md:h-80 md:w-80 self-end sm:relative md:absolute md:bottom-10 -scale-x-100">

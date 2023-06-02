@@ -5,7 +5,7 @@ import { BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
 	return (
-		<footer id="footer" className="flex justify-center text-white md:h-80 sm:h-96 items-center bg-footer sm:px-10">
+		<footer id="footer" className="flex justify-center text-white md:h-80 sm:h-auto items-center bg-footer sm:p-10 sm:pb-20">
 			<div className="flex flex-col gap-5 ">
 				<div className="flex gap-20">
 					<div className="flex flex-col gap-2">
@@ -33,7 +33,7 @@ const Footer = () => {
 				</div>
 				<div className="flex flex-col gap-10">
 					<div className="w-full h-1 bg-white"></div>
-					<div className="flex w-full justify-center ">
+					<div className="flex w-full justify-center text-center ">
 						© Copyright 2023. Made by Nikhil Shekhawat
 					</div>
 				</div>

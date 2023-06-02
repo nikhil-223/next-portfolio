@@ -1,6 +1,7 @@
 
 import { Navbar } from '@/components'
 import './globals.css'
+import './Contact.css'
 
 export const metadata = {
   title: 'Nikhil Shekhawat - portfolio',

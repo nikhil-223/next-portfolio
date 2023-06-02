@@ -1,0 +1,144 @@
+#contact {
+	width: 100%;
+	height: 100vh;
+	background-image: url("/images/background.jpg");
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	font-size: 12px;
+}
+.contact-box {
+	width: 80em;
+	height: 40em;
+	background: var(--bg-contact-color11);
+	box-shadow: 12px 13px 18px -6px rgba(0, 0, 0, 0.33);
+	border-radius: 1.2em;
+	display: flex;
+	flex-direction: row;
+	transition: all 0.7s;
+}
+.contact-me {
+	width: 35%;
+	height: 100%;
+	background: var(--bg-contact-color10);
+	border-radius: 1.2em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 4.42em 4.75em;
+	color: var(--text-color);
+}
+
+.contact-me span:nth-child(1) {
+	position: relative;
+	height: 3rem;
+	font-size: 2.5em;
+}
+.contact-me span:nth-child(2) {
+	position: relative;
+	height: auto;
+	font-size: 1.33em;
+}
+.contact-form {
+	padding: 2.4rem;
+	font-size: 1.2em;
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	color: var(--text-color);
+}
+.contact-form div {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+}
+.contact-form div:last-child {
+	flex-direction: row;
+	justify-content: space-between;
+}
+.contact-form div textarea,
+input[name='name'],input[name='email'] {
+	height: 3.25em;
+	border-radius: 0.5em;
+	padding: 1em;
+	border: 1px solid rgba(0, 0, 0, 0.34);
+}
+.contact-form div input[name='name'],input[name='email'] {
+	background-color: var(--bg-color8);
+	outline: none;
+	border: none;
+}
+.contact-form div textarea {
+	font-family: 'Roboto';
+	height: 9em;
+	max-height: 9em;
+	outline: none;
+	border: none;
+	background-color: var(--bg-color8);
+}
+.contact-form div input:focus {
+	border: none;
+}
+.contact-form .contact-button {
+	width: 7em;
+	height: 2rem;
+	border: none;
+	background: #42c5abb8;
+	box-shadow: 1px 1px 3px 0.2px rgba(0, 0, 0, 0.33);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-color);
+	cursor: pointer;
+	font-size: 1.2em;
+}
+
+.contact-links {
+	position: relative;
+	margin-top: 1em;
+	gap: 1em;
+	height: 5em;
+	display: flex;
+	justify-content: flex-start;
+	font-size: 2.8em;
+}
+.button-area{
+	margin-top: 2em;
+}
+
+
+.visibleUp{
+	transform: translate(0);
+}
+@media only screen and (max-width: 950px) {
+	#contact{
+		height:auto;
+	}
+	.contact-box {
+		height: auto;
+		flex-direction: column;
+	}
+	.contact-me {
+		width: 93%;
+		margin: 2em auto;
+		height: auto;
+		padding: 2em 3em;
+	}
+	.contact-form {
+		padding:3em 3em;
+		font-size: 1.1em;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		color: var(--text-color);
+	}
+	.contact-links {
+		top: 0em;
+		margin-top: 0;
+		height: auto;
+	}
+}

@@ -1,4 +1,4 @@
-import { About, Footer, Home, Projects } from '@/components'
+import { About, Contact, Footer, Home, Projects } from '@/components'
 
 export default function App() {
   
@@ -7,6 +7,7 @@ export default function App() {
    <Home/>
    <About/>
    <Projects/>
+   <Contact/>
    <Footer/>
    </>
   )
