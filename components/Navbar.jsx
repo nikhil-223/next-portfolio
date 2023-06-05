@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
@@ -5,10 +7,12 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { RiLightbulbFill } from "react-icons/ri";
 import { HiMail } from "react-icons/hi";
 import { ImLinkedin, ImGithub, ImTwitter } from "react-icons/im";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+	const pathname = usePathname();
 	return (
-		<nav id="navbar" className="flex fixed items-center justify-between w-full p-1 px-5 z-50 transition">
+		<nav id="navbar" className={`flex fixed items-center justify-between w-full p-1 px-5 z-50 transition ${pathname!=='/' && 'bg-white shadow-md'}`}>
 			<div className="flex gap-2 items-center">
 				<div className="relative w-10 h-10 rounded-full overflow-hidden">
 					<Image fill alt="profileImage" src="/images/profile.jpg" />

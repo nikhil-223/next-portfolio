@@ -5,9 +5,10 @@ import { HiExternalLink } from "react-icons/hi";
 import { AiOutlineCodeSandbox } from "react-icons/ai";
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Link from "next/link";
 
 const ProjectCard = (props) => {
-	const { projectName, imgURL, projectURL, projectDesc, github, aboutProject } =
+	const {id, projectName, imgURL, projectURL, projectStatus, github, aboutProject } =
 		props;
 
 	const ref = useRef();
@@ -46,17 +47,17 @@ const ProjectCard = (props) => {
             variants={projectVariants}
             initial= 'hidden'
             animate={controls}
-			className="project w-96 h-72 p-4 shadow-lg rounded-lg bg-white ">
-			<a href={projectURL} target="blank">
+			className="project md:w-projectCard aspect-4/3 sm:w-full p-4 shadow-lg rounded-lg bg-white ">
+			<Link href={`project/${id}`} >
 				<div className="relative rounded-lg overflow-hidden w-full h-4/5">
 					<Image src={imgURL} fill alt={projectName} />
-					{projectDesc !== "" && (
+					{projectStatus !== "" && (
 						<span className=" absolute p-1 bg-red-400 z-20 right-1 bottom-2 scale-75 rounded">
-							{projectDesc}
+							{projectStatus}
 						</span>
 					)}
 				</div>
-			</a>
+			</Link>
 
 			<div className="flex justify-between py-3">
 				<div className="flex flex-col">

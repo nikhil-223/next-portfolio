@@ -26,8 +26,15 @@ module.exports = {
 			height: {
 				section: "calc( 100vh + 1rem)",
 			},
+			width: {
+				projectCard: "28rem",
+			},
 			transitionDuration: {
 				2000: "2000ms",
+			},
+			aspectRatio: {
+				"4/3": "4 / 3",
+				"6/4":"6 / 4"
 			},
 		},
 		screens: {
@@ -38,6 +45,7 @@ module.exports = {
 		},
 		minWidth: {
 			note: "20rem",
+			projectCard: "28rem",
 		},
 	},
 	plugins: [],

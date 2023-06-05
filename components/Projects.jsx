@@ -1,57 +1,8 @@
 
 import { ProjectCard } from '.';
+import projects from '@/utils/projects';
 
 const Projects = () => {
-	const projects = [
-		{
-			projectName: "Crypto Dashboard",
-			aboutProject: "To show real time cryptocurrency data ",
-			description: "",
-			imgURL: "/images/crypto.jpg",
-			github: "https://github.com/nikhil-223/cryptocurrency-project",
-			projectURL: "https://crypto-currency-board.netlify.app",
-		},
-		{
-			projectName: "Talkr",
-			aboutProject: "A chatting app",
-			description: "In progress",
-			imgURL: "/images/chatApp.png",
-			github: "https://github.com/nikhil-223/chatting-app",
-			projectURL: "https://chatttingapp.netlify.app",
-		},
-		{
-			projectName: "Inotepad",
-			aboutProject: "A note making app",
-			description: "In progress",
-			imgURL: "/images/inotepad.png",
-			github: "https://github.com/nikhil-223/inotepad",
-			projectURL: "https://inotepad.netlify.app",
-		},
-		{
-			projectName: "Noted",
-			aboutProject: "A note making app created using Next.js",
-			description: "",
-			imgURL: "/images/Noted.png",
-			github: "https://github.com/nikhil-223/noted",
-			projectURL: "https://tobenoted.vercel.app",
-		},
-		{
-			projectName: "Portfolio",
-			aboutProject: "My personal portfolio website",
-			description: "",
-			imgURL: "/images/Portfolio.png",
-			github: "https://github.com/nikhil-223/myPortfolio",
-			projectURL: "https://nikhilshekhawat.netlify.app",
-		},
-		{
-			projectName: "CSS Challenges",
-			aboutProject: "Some css challenges",
-			description: "In progress",
-			imgURL: "/images/cssChallenges.png",
-			github: "https://github.com/nikhil-223/css-challenge-react",
-			projectURL: "https://css-challengesbynikhil.netlify.app/",
-		},
-	];
   
 
 	return (
@@ -67,11 +18,12 @@ const Projects = () => {
 				{projects.map((item) => {
 					return (
 						<ProjectCard
-							key={item.projectName}
+							key={item.id}
+							id={item.id}
 							projectName={item.projectName}
 							imgURL={item.imgURL}
 							projectURL={item.projectURL}
-							projectDesc={item.description}
+							projectStatus={item.status}
 							aboutProject={item.aboutProject}
 							github={item.github}
 						/>
@@ -82,4 +34,4 @@ const Projects = () => {
 	);
 }
 
-export default Projects
+export default Projects;
