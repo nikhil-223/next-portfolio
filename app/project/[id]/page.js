@@ -17,17 +17,34 @@ const page = () => {
 	})[0];
 
 	return (
-		<div className="flex flex-col gap-3 p-10 min-h-screen h-auto bg-slate-100">
+		<div className="flex flex-col gap-3 p-5 md:p-10 min-h-screen h-auto bg-slate-100">
 			<div className="pt-10  flex justify-between items-center">
 				<span className="text-3xl font-extrabold">{project.projectName}</span>
-				<div className="text-xl font-bold p-1 px-3 mx-5 rounded-lg bg-stone-600 text-white">
+				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 text-white">
 					<Link href="/"> Back</Link>
 				</div>
 			</div>
 
-			<div className="flex justify-between text-xl h-auto w-full">
-				<div className="flex flex-col justify-between items-start">
-					<p className="w-auto">{project.shortDesc}</p>
+			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
+				{project.detailedImgURL.map((item) => (
+					<div className=" relative aspect-6/4 md:w-3/4 sm:w-full rounded-xl overflow-hidden md:mx-5 mt-5 ">
+						<Image src={item} fill />
+					</div>
+				))}
+
+				<div className="flex w-full flex-col justify-between items-start gap-4 ">
+					<ul className="w-auto flex flex-col items-start ">
+						{project.shortDesc.split("/").map((item) => (
+							<li className=" text-lg flex items-center">
+								<span className="font-bold flex gap-1 items-center">
+									<span className="text-3xl">{"•"}</span>
+									{item.split(":")[0]}
+									{" :"}
+								</span>
+								<span className="ml-1 ">{item.split(":")[1]}</span>{" "}
+							</li>
+						))}
+					</ul>
 					<div className="flex justify-start items-center gap-3">
 						<span className="heading  bg-green-400 w-auto px-3 py-1 rounded-md">
 							<a
@@ -48,9 +65,6 @@ const page = () => {
 							</a>
 						</span>
 					</div>
-				</div>
-				<div className=" relative aspect-6/4 min-w-projectCard rounded-xl overflow-hidden mx-5">
-					<Image src={project.imgURL} fill />
 				</div>
 			</div>
 

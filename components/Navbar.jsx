@@ -12,7 +12,11 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
 	const pathname = usePathname();
 	return (
-		<nav id="navbar" className={`flex fixed items-center justify-between w-full p-1 px-5 z-50 transition ${pathname!=='/' && 'bg-white shadow-md'}`}>
+		<nav
+			id="navbar"
+			className={`flex fixed items-center justify-between w-full p-1 px-5 z-50 transition ${
+				pathname !== "/" && "bg-white shadow"
+			}`}>
 			<div className="flex gap-2 items-center">
 				<div className="relative w-10 h-10 rounded-full overflow-hidden">
 					<Image fill alt="profileImage" src="/images/profile.jpg" />
@@ -68,7 +72,9 @@ const Navbar = () => {
 			{/* mobile navigation menu */}
 			<ul
 				id="menu"
-				className=" fixed bottom-5 left-1/2 -translate-x-1/2 shadow-lg sm:flex md:hidden gap-1 p-2 px-3 bg-slate-50 rounded-full ">
+				className={`fixed bottom-5 left-1/2 -translate-x-1/2 shadow-lg  md:hidden gap-1 p-2 px-3 bg-slate-50 rounded-full ${
+					pathname !== "/" ? "sm:hidden" : "sm:flex"
+				}`}>
 				<li className="flex flex-col items-center">
 					<span className="p-2 text-xl hover:text-red-800">
 						<AiFillHome />
