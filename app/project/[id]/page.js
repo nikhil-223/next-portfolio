@@ -28,23 +28,58 @@ const page = () => {
 			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
 				{project.detailedImgURL.map((item) => (
 					<div className=" relative aspect-6/4 md:w-3/4 sm:w-full rounded-xl overflow-hidden md:mx-5 mt-5 ">
-						<Image src={item} fill />
+						<a
+							href={project.projectURL}
+							className="flex gap-2 items-center"
+							target="_blank">
+							<Image src={item} fill />
+						</a>
 					</div>
 				))}
 
 				<div className="flex w-full flex-col justify-between items-start gap-4 ">
-					<ul className="w-auto flex flex-col items-start ">
-						{project.shortDesc.split("/").map((item) => (
-							<li className=" text-lg flex items-center">
-								<span className="font-bold flex gap-1 items-center">
-									<span className="text-3xl">{"•"}</span>
-									{item.split(":")[0]}
-									{" :"}
-								</span>
-								<span className="ml-1 ">{item.split(":")[1]}</span>{" "}
-							</li>
-						))}
-					</ul>
+					<div className="flex sm:flex-col md:flex-row px-3 py-5 bg-emerald-200 w-full rounded-lg">
+						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
+							{project.shortDesc
+								.slice(0, Math.ceil(project.shortDesc.length / 2)+1)
+								.map((item, index) => (
+									<li className="text-xl flex flex-col items-start">
+										<span className="font-bold flex gap-1 items-center">
+											<span className="text-3xl">{"•"}</span>
+											{item.split(":")[0]}
+											{" :"}
+										</span>
+										<span className=" ml-4 text-lg ">{item.split(":")[1]}</span>{" "}
+									</li>
+								))}
+						</ul>
+						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
+							{project.shortDesc
+								.slice(Math.ceil(project.shortDesc.length / 2)+1)
+								.map((item, index) => (
+									<li className=" text-xl flex flex-col items-start">
+										<span className="font-bold flex gap-1 items-center">
+											<span className="text-3xl">{"•"}</span>
+											{item.split(":")[0]}
+											{" :"}
+										</span>
+										<span className=" ml-4 text-lg ">{item.split(":")[1]}</span>{" "}
+									</li>
+								))}
+						</ul>
+					</div>
+
+					{/* toolsUsed */}
+					<div className=" mb-5 p-3 pb-4 bg-red-200 rounded-lg w-full">
+						<h1 className="font-bold text-2xl mb-4 text-teal-950">
+							Tools Used
+						</h1>
+						<div className=" flex flex-wrap gap-2">
+							{project.toolsUsed.map((item) => (
+								<span className="py-2 px-3 bg-color1 rounded-md">{item}</span>
+							))}
+						</div>
+					</div>
 					<div className="flex justify-start items-center gap-3">
 						<span className="heading  bg-green-400 w-auto px-3 py-1 rounded-md">
 							<a
@@ -55,7 +90,7 @@ const page = () => {
 								<BiLink />
 							</a>
 						</span>
-						<span className="heading  bg-red-400 w-auto px-3 py-1 rounded-md">
+						<span className="heading bg-teal-400 w-auto px-3 py-1 rounded-md">
 							<a
 								href={project.github}
 								className="flex gap-2 items-center"
@@ -66,13 +101,6 @@ const page = () => {
 						</span>
 					</div>
 				</div>
-			</div>
-
-			<div className=""></div>
-
-			<div className="">
-				<div className="heading text-2xl font-extrabold"> Overview</div>
-				<p className="text-lg">{project.overview}</p>
 			</div>
 		</div>
 	);

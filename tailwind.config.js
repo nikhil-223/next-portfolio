@@ -22,9 +22,11 @@ module.exports = {
 				skillPercentage: "#053967",
 				projectSec: "#f5faff",
 				footer: "#171921",
+				color1: "rgb(245 136 136)",
 			},
 			height: {
 				section: "calc( 100vh + 1rem)",
+				ul: "45rem",
 			},
 			width: {
 				projectCard: "28rem",
@@ -34,7 +36,7 @@ module.exports = {
 			},
 			aspectRatio: {
 				"4/3": "4 / 3",
-				"6/4":"6 / 4"
+				"6/4": "6 / 4",
 			},
 		},
 		screens: {
