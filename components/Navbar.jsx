@@ -8,6 +8,7 @@ import { RiLightbulbFill } from "react-icons/ri";
 import { HiMail } from "react-icons/hi";
 import { ImLinkedin, ImGithub, ImTwitter } from "react-icons/im";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
 	const pathname = usePathname();
@@ -17,19 +18,21 @@ const Navbar = () => {
 			className={`flex fixed items-center justify-between w-full p-1 px-5 z-50 transition ${
 				pathname !== "/" && "bg-white shadow"
 			}`}>
-			<div className="flex gap-2 items-center">
+			<Link href="/" className="flex gap-2 items-center">
 				<div className="relative w-10 h-10 rounded-full overflow-hidden">
 					<Image fill alt="profileImage" src="/images/profile.jpg" />
 				</div>
 				<span className=" text-lg font-bold">NIKHIL SHEKHAWAT</span>
-			</div>
+			</Link>
 
 			{/* big screen */}
 			<ul
 				id="menu"
-				className="sm:hidden md:flex gap-3 font-bold p-2 text-lg cursor-pointer">
+				className={`sm:hidden gap-3 font-bold p-2 text-lg cursor-pointer${
+					pathname !== "/" ? "md:hidden" : "md:flex"
+				}`}>
 				<li className=" hover:text-amber-700">
-					<a href="#home"> HOME</a>
+					<Link href="#home"> HOME</Link>
 				</li>
 				<li className=" hover:text-amber-700">
 					<a href="#about"> ABOUT</a>
