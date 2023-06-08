@@ -1,11 +1,19 @@
+'use client'
+
 import React from "react";
 import { TfiLinkedin } from "react-icons/tfi";
 import { SiGithub } from "react-icons/si";
 import { BsTwitter } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+	const pathname = usePathname()
 	return (
-		<footer id="footer" className="flex justify-center text-white md:h-80 sm:h-auto items-center bg-footer sm:p-10 sm:pb-20">
+		<footer
+			id="footer"
+			className={`flex justify-center text-white md:h-80 sm:h-auto items-center bg-footer sm:p-10  ${
+				pathname === "/" && "sm:pb-20"
+			}`}>
 			<div className="flex flex-col gap-5 ">
 				<div className="flex flex-col gap-2">
 					<div className="flex gap-2 justify-between">

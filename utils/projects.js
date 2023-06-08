@@ -107,7 +107,7 @@ const projects = [
 	},
 	{
 		id: "4",
-		projectName: "Movie booking backend ",
+		projectName: "Movie booking backend",
 		aboutProject: "an alma better capstone project",
 		shortDesc: [
 			"Real-time Cryptocurrency Data: Integrate Coingecko API to fetch real-time data of various cryptocurrencies",

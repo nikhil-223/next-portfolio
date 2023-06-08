@@ -48,7 +48,7 @@ const ProjectCard = (props) => {
             initial= 'hidden'
             animate={controls}
 			className="project md:w-projectCard aspect-4/3 sm:w-full p-4 shadow-lg rounded-lg bg-white ">
-			<Link href={`project/${id}`} >
+			<Link href={`project/${projectName}`} >
 				<div className="relative rounded-lg overflow-hidden w-full h-4/5">
 					<Image src={imgURL} fill alt={projectName} />
 					{projectStatus !== "" && (

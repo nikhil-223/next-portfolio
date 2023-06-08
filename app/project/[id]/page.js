@@ -10,10 +10,10 @@ import Link from "next/link";
 
 const page = () => {
 	const pathname = usePathname();
-	const id = pathname.split("/")[2];
-
+	const projectname = pathname.split("/")[2];
+	
 	const project = projects.filter((item) => {
-		return item.id === id;
+		return item.projectName === projectname.split("%20").join(" ");
 	})[0];
 
 	return (
@@ -26,13 +26,13 @@ const page = () => {
 			</div>
 
 			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
-				{project.detailedImgURL.map((item) => (
-					<div className=" relative aspect-6/4 md:w-3/4 sm:w-full rounded-xl overflow-hidden md:mx-5 mt-5 ">
+				{project.detailedImgURL.map((item,index) => (
+					<div key={index} className=" relative aspect-6/4 md:w-3/4 sm:w-full rounded-xl overflow-hidden md:mx-5 mt-5 ">
 						<a
 							href={project.projectURL}
 							className="flex gap-2 items-center"
 							target="_blank">
-							<Image src={item} fill />
+							<Image alt="projectDesc" src={item} fill />
 						</a>
 					</div>
 				))}
@@ -43,7 +43,7 @@ const page = () => {
 							{project.shortDesc
 								.slice(0, Math.ceil(project.shortDesc.length / 2)+1)
 								.map((item, index) => (
-									<li className="text-xl flex flex-col items-start">
+									<li key={index} className="text-xl flex flex-col items-start">
 										<span className="font-bold flex gap-1 items-center">
 											<span className="text-3xl">{"•"}</span>
 											{item.split(":")[0]}
@@ -57,7 +57,7 @@ const page = () => {
 							{project.shortDesc
 								.slice(Math.ceil(project.shortDesc.length / 2)+1)
 								.map((item, index) => (
-									<li className=" text-xl flex flex-col items-start">
+									<li key={index} className=" text-xl flex flex-col items-start">
 										<span className="font-bold flex gap-1 items-center">
 											<span className="text-3xl">{"•"}</span>
 											{item.split(":")[0]}
@@ -75,8 +75,8 @@ const page = () => {
 							Tools Used
 						</h1>
 						<div className=" flex flex-wrap gap-2">
-							{project.toolsUsed.map((item) => (
-								<span className="py-2 px-3 bg-color1 rounded-md">{item}</span>
+							{project.toolsUsed.map((item,index) => (
+								<span key={index} className="py-2 px-3 bg-color1 rounded-md">{item}</span>
 							))}
 						</div>
 					</div>
