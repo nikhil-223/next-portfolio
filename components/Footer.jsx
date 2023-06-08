@@ -7,15 +7,9 @@ const Footer = () => {
 	return (
 		<footer id="footer" className="flex justify-center text-white md:h-80 sm:h-auto items-center bg-footer sm:p-10 sm:pb-20">
 			<div className="flex flex-col gap-5 ">
-				<div className="flex gap-20">
-					<div className="flex flex-col gap-2">
+				<div className="flex flex-col gap-2">
+					<div className="flex gap-2 justify-between">
 						<h3 className="text-2xl font-bold">Nikhil Shekhawat</h3>
-						<span className="">
-							I specialize in creating dynamic and interactive websites
-							utilizing a range of programming languages and frameworks
-						</span>
-					</div>
-					<div>
 						<div className=" flex gap-5 text-2xl">
 							<a
 								href="https://www.linkedin.com/in/nikhil-shekhawat-986385179/"
@@ -29,6 +23,12 @@ const Footer = () => {
 								<BsTwitter />
 							</a>
 						</div>
+					</div>
+					<div>
+						<span className="">
+							I specialize in creating dynamic and interactive websites
+							utilizing a range of programming languages and frameworks
+						</span>
 					</div>
 				</div>
 				<div className="flex flex-col gap-10">
