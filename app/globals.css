@@ -63,6 +63,26 @@ body {
 	animation: scroller 1s linear infinite forwards;
 }
 
+.project-image::-webkit-scrollbar {
+  width: 1px;
+  height: 5px;
+}
+
+/* Track */
+.project-image::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.project-image::-webkit-scrollbar-thumb {
+  background: #edc5c5; 
+}
+
+/* Handle on hover */
+.project-image::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 @keyframes scroller {
   0% {
     bottom:20%;

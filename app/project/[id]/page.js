@@ -17,7 +17,7 @@ const page = () => {
 	})[0];
 
 	return (
-		<div className="flex flex-col gap-3 p-5 md:p-10 min-h-screen h-auto bg-slate-100">
+		<div className="flex flex-col gap-3 p-5 md:p-10 min-h-screen h-auto bg-white">
 			<div className="pt-10  flex justify-between items-center">
 				<span className="text-3xl font-extrabold">{project.projectName}</span>
 				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 text-white">
@@ -26,22 +26,26 @@ const page = () => {
 			</div>
 
 			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
-				{project.detailedImgURL.map((item,index) => (
-					<div key={index} className=" relative aspect-6/4 md:w-3/4 sm:w-full rounded-xl overflow-hidden md:mx-5 mt-5 ">
-						<a
-							href={project.projectURL}
-							className="flex gap-2 items-center"
-							target="_blank">
-							<Image alt="projectDesc" src={item} fill />
-						</a>
+				{project.detailedImgURL.map((item, index) => (
+					<div className="project-image w-full md:overflow-hidden sm:overflow-scroll">
+						<div
+							key={index}
+							className=" relative aspect-6/4 md:w-full sm:w-width_double  rounded-xl overflow-hidden md:mx-5 mt-5 ">
+							<a
+								href={project.projectURL}
+								className="flex gap-2 items-center"
+								target="_blank">
+								<Image alt="projectDesc" src={item} fill />
+							</a>
+						</div>
 					</div>
 				))}
 
 				<div className="flex w-full flex-col justify-between items-start gap-4 ">
-					<div className="flex sm:flex-col md:flex-row px-3 py-5 bg-emerald-200 w-full rounded-lg">
+					<div className="flex sm:flex-col md:flex-row px-3 py-5 bg-gray-50 border w-full rounded-lg">
 						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
 							{project.shortDesc
-								.slice(0, Math.ceil(project.shortDesc.length / 2)+1)
+								.slice(0, Math.ceil(project.shortDesc.length / 2) + 1)
 								.map((item, index) => (
 									<li key={index} className="text-xl flex flex-col items-start">
 										<span className="font-bold flex gap-1 items-center">
@@ -55,9 +59,11 @@ const page = () => {
 						</ul>
 						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
 							{project.shortDesc
-								.slice(Math.ceil(project.shortDesc.length / 2)+1)
+								.slice(Math.ceil(project.shortDesc.length / 2) + 1)
 								.map((item, index) => (
-									<li key={index} className=" text-xl flex flex-col items-start">
+									<li
+										key={index}
+										className=" text-xl flex flex-col items-start">
 										<span className="font-bold flex gap-1 items-center">
 											<span className="text-3xl">{"•"}</span>
 											{item.split(":")[0]}
@@ -75,8 +81,10 @@ const page = () => {
 							Tools Used
 						</h1>
 						<div className=" flex flex-wrap gap-2">
-							{project.toolsUsed.map((item,index) => (
-								<span key={index} className="py-2 px-3 bg-color1 rounded-md">{item}</span>
+							{project.toolsUsed.map((item, index) => (
+								<span key={index} className="py-2 px-3 bg-color1 rounded-md">
+									{item}
+								</span>
 							))}
 						</div>
 					</div>

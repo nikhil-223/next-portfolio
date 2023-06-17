@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Skill } from "@/components";
+import { Skill } from "@/app/components";
 // import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 
@@ -32,8 +32,6 @@ const About = () => {
 		{ skillName: "Java", skillPercentage: "60%" },
 		{ skillName: "Framer Motion", skillPercentage: "40%" },
 	];
-
-	
 
 	return (
 		<section

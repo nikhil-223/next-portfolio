@@ -30,6 +30,7 @@ module.exports = {
 			},
 			width: {
 				projectCard: "28rem",
+				width_double:"200%"
 			},
 			transitionDuration: {
 				2000: "2000ms",
