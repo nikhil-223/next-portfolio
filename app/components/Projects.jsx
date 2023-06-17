@@ -8,7 +8,7 @@ const Projects = () => {
 	return (
 		<section
 			id="projects"
-			className="h-auto w-full flex flex-wrap items-center justify-center bg-projectSec pt-20 p-10 gap-5">
+			className="h-auto w-full flex flex-wrap items-center justify-center bg-projectSec pt-20 sm:p-3 md:p-10 gap-5">
 			<div className="w-full flex justify-center">
 				<span className="text-cyan-500 font-bold text-3xl">
 					<span className=" text-black">{`P`}</span>ROJECTS

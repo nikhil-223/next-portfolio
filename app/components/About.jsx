@@ -44,7 +44,6 @@ const About = () => {
 				</div>
 				<div className="flex md:flex-row sm:flex-col gap-6 ">
 					<div className="md:w-1/2 sm:w-full sm:px-3 md:px-6 flex flex-col gap-5">
-						<div className="font-bold text-2xl">Get to know me!</div>
 						<ul className="text-lg list-disc flex flex-col gap-2 ">
 							<li>
 								As a passionate <b>Full-stack Web Developer</b> I'm dedicated to
