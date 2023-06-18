@@ -1,6 +1,38 @@
 const projects = [
 	{
 		id: "1",
+		projectName: "Talkr",
+		aboutProject: "A chatting app",
+		shortDesc: [
+			"Innovative Chatting App: Talkr is a cutting-edge chatting application that enhances online communication, offering advanced features and a user-friendly interface.",
+			"Real-time Messaging: Experience lightning-fast real-time messaging in Talkr, allowing users to connect and chat instantly without any delays.",
+			"Group Creation: Talkr provides the ability to create personalized chat groups, making it easier for users to collaborate and engage in group discussions.",
+			"Profile Customization: Customize your Talkr profile with photos, status updates, and other details to reflect your unique personality and make connections more meaningful.",
+			"Conversation and Message Management: Take control of your chat history with Talkr's convenient conversation and message deletion options, allowing you to manage your privacy and keep your chats organized.",
+			"Copy Message Feature: With Talkr's copy message feature, you can effortlessly copy and share important messages with others, enabling seamless information sharing.",
+			"Google and GitHub Authorization: Talkr offers secure authentication through Google and GitHub, allowing users to conveniently sign in using their existing accounts while ensuring data safety.",
+			"Last Seen and Online/Offline Status: Stay updated with your contacts' availability using Talkr's Last Seen feature, which displays the last active timestamp, along with their online or offline status.",
+			"Tech Stack: Talkr is built using a modern tech stack, including Next.js, MongoDB, Prisma, Pusher, and NextAuth, ensuring a seamless and efficient user experience.",
+			"Learning Project: Talkr is a valuable learning project that showcases your ability to develop complex applications and work with various technologies, demonstrating your growth as a developer.",
+		],
+		status: "",
+		toolsUsed: [
+			"Next.js",
+			"NextAuth",
+			"React.js",
+			" Javascript ",
+			"TailwindCSS",
+			"Prisma",
+			"MongoDB",
+			"Pusher",
+		],
+		imgURL: "/images/Talkr.png",
+		detailedImgURL: ["/images/TalkrDetails.svg"],
+		github: "https://github.com/nikhil-223/next-talkr",
+		projectURL: "https://talkr-chatting-app.vercel.app/",
+	},
+	{
+		id: "2",
 		projectName: "Crypto Dashboard",
 		aboutProject: "To show real time cryptocurrency data ",
 		shortDesc: [
@@ -18,8 +50,6 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "",
-		overview:
-			"Crypto Currency Dashboard is a web application that allows users to monitor real-time data of various cryptocurrencies. Built with React.js, Redux, and Tailwind CSS, this dashboard provides a user-friendly interface for tracking and analyzing cryptocurrency information.The frontend of the application, developed using React.js, offers a responsive and intuitive design. With the help of Tailwind CSS, the styling is customizable and consistent across different components. Redux is employed for centralized state management, enabling efficient data flow and easy access to cryptocurrency data.The application fetches real-time cryptocurrency data from reliable APIs CoinGecko . Through Fetch, it retrieves information including current prices, market cap, trading volume, and price trends for a wide range of cryptocurrencies.Users can view the real-time data on the dashboard, which displays a list of cryptocurrencies sortable by various criteria. Detailed information about each cryptocurrency, such as historical price charts and additional metrics, can be accessed on separate pages. The dashboard provides an intuitive and informative visual representation of the cryptocurrency market.To enhance the user experience, the application can incorporate features like price alerts. Users can set customized notifications for specific cryptocurrencies, receiving alerts when prices surpass certain thresholds. This functionality helps users stay informed about market movements and make informed decisions.Additionally, the application can include a user authentication system, allowing users to create accounts, save personalized settings, and access their dashboard preferences from any device. Social features such as user-generated content, comments, and a community forum can also be implemented, facilitating knowledge sharing and discussions among users.Crypto Currency Dashboard offers a comprehensive and convenient platform for users to monitor and analyze cryptocurrency data in real-time. Its modern frontend, powered by React.js, Redux, and Tailwind CSS, ensures a visually appealing and responsive interface. With features like price alerts and potential social elements, users can stay updated and actively engage with the dynamic cryptocurrency market.",
 		toolsUsed: [
 			"React.js",
 			" Javascript ",
@@ -35,44 +65,7 @@ const projects = [
 		projectURL: "https://crypto-currency-board.netlify.app",
 	},
 	{
-		id: "2",
-		projectName: "Talkr",
-		aboutProject: "A chatting app",
-		shortDesc: [
-			"User Registration and Login: Users can create an account and securely log in to the app using their credentials.",
-			"Profile Customization: Users can personalize their profiles by uploading a profile picture.",
-			"Real-time Messaging: Users can send and receive messages in real time, allowing instant communication.",
-			"Message Deletion: Users have the ability to delete their own messages, providing control over their conversations.",
-			"Group Chat: Users can create and join groups to engage in multi-participant conversations.",
-			"Online Status: Users can see the online status of their contacts to know who is currently available for chat.",
-			"Notifications: Users receive notifications for new messages and group invitations.",
-			"Search Functionality: Users can search for other users or groups within the app.",
-			"Emojis and Stickers: Users can express themselves using a wide range of emojis and stickers in their conversations.",
-			"Multimedia Sharing: Users can share images, videos, and other files with their contacts or groups.",
-			"Read Receipts: Users can see if their sent messages have been read by the recipients.",
-			"Typing Indicators: Users can see when the other person is typing a message.",
-			"Account Settings: Users can manage their account settings, including profile information, privacy preferences, and notification preferences.",
-		],
-		status: "In progress",
-		overview: "overview",
-		toolsUsed: [
-			"React.js",
-			" Javascript ",
-			"Redux-toolkit",
-			"redux-thunk",
-			"node.js",
-			"mongodb",
-			"express.js",
-			"socket.io",
-			"json web token",
-		],
-		imgURL: "/images/chatApp.png",
-		detailedImgURL: ["/images/crypto.svg"],
-		github: "https://github.com/nikhil-223/chatting-app",
-		projectURL: "https://chatttingapp.netlify.app",
-	},
-	{
-		id: "3",
+		id: "4",
 		projectName: "Inotepad",
 		aboutProject: "A note making app",
 		shortDesc: [
@@ -90,7 +83,6 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "In progress",
-		overview: "overview",
 		toolsUsed: [
 			"React.js",
 			" Javascript ",
@@ -107,7 +99,7 @@ const projects = [
 		projectURL: "https://inotepad.netlify.app",
 	},
 	{
-		id: "4",
+		id: "5",
 		projectName: "Movie booking backend",
 		aboutProject: "an alma better capstone project",
 		shortDesc: [
@@ -125,7 +117,6 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "",
-		overview: "overview",
 		toolsUsed: [
 			"React.js",
 			"Next.js",
@@ -140,7 +131,7 @@ const projects = [
 		projectURL: "https://bookmyshow-project-client.vercel.app",
 	},
 	{
-		id: "5",
+		id: "6",
 		projectName: "Noted",
 		aboutProject: "A note making app created using Next.js",
 		shortDesc: [
@@ -158,7 +149,6 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "",
-		overview: "overview",
 		toolsUsed: [
 			"Next.js",
 			"next-auth.js",
@@ -168,12 +158,12 @@ const projects = [
 			"TailwindCSS",
 		],
 		imgURL: "/images/Noted.png",
-		detailedImgURL: ["/images/crypto.svg"],
+		detailedImgURL: ["/images/NotedDetail.svg"],
 		github: "https://github.com/nikhil-223/noted",
 		projectURL: "https://tobenoted.vercel.app",
 	},
 	{
-		id: "6",
+		id: "7",
 		projectName: "Portfolio",
 		aboutProject: "My personal portfolio website",
 		shortDesc: [
@@ -191,7 +181,6 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "",
-		overview: "overview",
 		toolsUsed: [
 			"Next.js",
 			"React.js",
@@ -200,12 +189,12 @@ const projects = [
 			"Framer motion",
 		],
 		imgURL: "/images/Portfolio.png",
-		detailedImgURL: ["/images/crypto.svg"],
+		detailedImgURL: ["/images/Portfolio.png"],
 		github: "https://github.com/nikhil-223/myPortfolio",
 		projectURL: "https://nikhilshekhawat.netlify.app",
 	},
 	{
-		id: "7",
+		id: "8",
 		projectName: "CSS Challenges",
 		aboutProject: "Some css challenges",
 		shortDesc: [
@@ -223,10 +212,9 @@ const projects = [
 			"Data Refresh: Include automatic data refresh mechanism to keep cryptocurrency data up to date",
 		],
 		status: "In progress",
-		overview: "overview",
 		toolsUsed: ["React.js", " Javascript ", "CSS"],
 		imgURL: "/images/cssChallenges.png",
-		detailedImgURL: ["/images/crypto.svg", "/images/crypto.svg"],
+		detailedImgURL: ["/images/cssChallenges.png"],
 		github: "https://github.com/nikhil-223/css-challenge-react",
 		projectURL: "https://css-challengesbynikhil.netlify.app/",
 	},
