@@ -35,7 +35,7 @@ const page = () => {
 								href={project.projectURL}
 								className="flex gap-2 items-center"
 								target="_blank">
-								<Image alt="projectDesc" src={item} fill />
+								<Image priority alt="projectDesc" src={item} fill />
 							</a>
 						</div>
 					</div>
