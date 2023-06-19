@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiLightbulbFill } from "react-icons/ri";
@@ -9,9 +9,14 @@ import { HiMail } from "react-icons/hi";
 import { ImLinkedin, ImGithub, ImTwitter } from "react-icons/im";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import NavListItem from "./NavListItem";
+import useRoutes from "../hooks/useRoute";
 
 const Navbar = () => {
 	const pathname = usePathname();
+
+	const routes = useRoutes();
+
 	return (
 		<nav
 			id="navbar"
@@ -31,18 +36,15 @@ const Navbar = () => {
 				className={`sm:hidden gap-3 font-bold p-2 text-lg cursor-pointer ${
 					pathname !== "/" ? "md:hidden" : "md:flex"
 				}`}>
-				<li className=" hover:text-amber-700">
-					<Link href="#home"> HOME</Link>
-				</li>
-				<li className=" hover:text-amber-700">
-					<a href="#about"> ABOUT</a>
-				</li>
-				<li className=" hover:text-amber-700">
-					<a href="#projects"> PROJECTS</a>
-				</li>
-				<li className=" hover:text-amber-700">
-					<a href="#contact"> CONTACT</a>
-				</li>
+				{routes.map((route) => (
+					<NavListItem
+						isActive={route.isActive}
+						key={route.label}
+						href={route.href}
+						icon={route.icon}
+						label={route.label}
+					/>
+				))}
 			</ul>
 
 			<div className="flex gap-4 sm:flex md:hidden p-2 text-2xl">
@@ -78,30 +80,15 @@ const Navbar = () => {
 				className={`fixed bottom-5 left-1/2 -translate-x-1/2 shadow-lg  md:hidden gap-1 p-2 px-3 bg-slate-50 rounded-full ${
 					pathname !== "/" ? "sm:hidden" : "sm:flex"
 				}`}>
-				<li className="flex flex-col items-center">
-					<span className="p-2 text-xl hover:text-red-800">
-						<AiFillHome />
-					</span>
-					{/* <p className=" text-xs">HOME</p> */}
-				</li>
-				<li className="flex flex-col items-center">
-					<span className="p-2 text-xl hover:text-red-800">
-						<BsFillPersonFill />
-					</span>
-					{/* <p className=" text-xs">ABOUT</p> */}
-				</li>
-				<li className="flex flex-col items-center">
-					<span className="p-2 text-xl hover:text-red-800">
-						<RiLightbulbFill />
-					</span>
-					{/* <p className=" text-xs">PROJECTS</p> */}
-				</li>
-				<li className="flex flex-col items-center">
-					<span className="p-2 text-xl hover:text-red-800">
-						<HiMail />
-					</span>
-					{/* <p className=" text-xs">CONTACT</p> */}
-				</li>
+				{routes.map((route) => (
+					<NavListItem
+						isActive={route.isActive}
+						key={route.label}
+						href={route.href}
+						icon={route.icon}
+						label={route.label}
+					/>
+				))}
 			</ul>
 		</nav>
 	);
