@@ -41,6 +41,7 @@ const page = () => {
 					</div>
 				))}
 
+				{/* bullet points */}
 				<div className="flex w-full flex-col justify-between items-start gap-4 ">
 					<div className="flex sm:flex-col md:flex-row px-3 py-5 bg-gray-50 border w-full rounded-lg">
 						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
@@ -88,8 +89,10 @@ const page = () => {
 							))}
 						</div>
 					</div>
+
+					{/* Live link and github links  */}
 					<div className="flex justify-start items-center gap-3">
-						<span className="heading  bg-green-400 w-auto px-3 py-1 rounded-md">
+						<span className="heading border-[3px] hover:shadow-md transition-all border-teal-400  bg-teal-400 w-auto px-3 py-1 rounded-md">
 							<a
 								href={project.projectURL}
 								className="flex gap-2 items-center"
@@ -98,7 +101,7 @@ const page = () => {
 								<BiLink />
 							</a>
 						</span>
-						<span className="heading bg-teal-400 w-auto px-3 py-1 rounded-md">
+						<span className="heading border-[3px] hover:shadow-md transition-all hover:bg-gray-200 border-gray-200 w-auto px-3 py-1 rounded-md">
 							<a
 								href={project.github}
 								className="flex gap-2 items-center"

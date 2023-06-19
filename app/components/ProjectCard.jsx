@@ -49,7 +49,7 @@ const ProjectCard = (props) => {
             animate={controls}
 			className="project md:w-projectCard aspect-4/3 sm:w-full p-4 shadow-lg rounded-lg bg-white ">
 			<Link href={`project/${projectName}`} >
-				<div className="relative rounded-lg overflow-hidden w-full h-4/5">
+				<div className="relative rounded-lg overflow-hidden w-full h-4/5 border-[3px] border-stone-100">
 					<Image src={imgURL} fill alt={projectName} />
 					{projectStatus !== "" && (
 						<span className=" absolute p-1 bg-red-400 z-20 right-1 bottom-2 scale-75 rounded">
@@ -60,18 +60,18 @@ const ProjectCard = (props) => {
 			</Link>
 
 			<div className="flex justify-between py-3">
-				<div className="flex flex-col">
+				<div className="flex flex-col ml-3">
 					<span className="font-bold">{projectName}</span>
 					<span className="text-sm">{aboutProject}</span>
 				</div>
-				<div className="flex gap-2 px-2 text-2xl">
+				{/* <div className="flex gap-2 px-2 text-2xl">
 					<a href={projectURL} target="blank">
 						<HiExternalLink />
 					</a>
 					<a href={github}>
 						<AiOutlineCodeSandbox />
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</motion.div>
 	);
