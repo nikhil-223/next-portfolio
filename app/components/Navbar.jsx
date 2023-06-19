@@ -28,7 +28,7 @@ const Navbar = () => {
 			{/* big screen */}
 			<ul
 				id="menu"
-				className={`sm:hidden gap-3 font-bold p-2 text-lg cursor-pointer${
+				className={`sm:hidden gap-3 font-bold p-2 text-lg cursor-pointer ${
 					pathname !== "/" ? "md:hidden" : "md:flex"
 				}`}>
 				<li className=" hover:text-amber-700">
