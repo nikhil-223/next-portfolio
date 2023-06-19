@@ -6,11 +6,12 @@ const getSection = () => {
 	//intersection observer
 	useEffect(() => {
 		const cards = document.querySelectorAll([
-			"#projects",
 			"#home",
 			"#about",
 			"#contact",
 		]);
+
+		const projects = document.querySelectorAll("#projects")
 
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -27,6 +28,10 @@ const getSection = () => {
 		cards.forEach((card) => {
 			observer.observe(card);
 		});
+
+		projects.forEach((project) => {
+			observer.observe(project);
+		})
 	}, []);
 
 	return active;
