@@ -8,8 +8,8 @@ const Projects = () => {
 	return (
 		<div
 			id="projects"
-			className=" flex flex-col relative w-full h-auto min-h-screen pt-12 p-8 md:pt-20 md:p-5 gap-10  ">
-			<div className="w-full flex justify-center">
+			className=" flex flex-col relative w-full h-auto min-h-screen pt-12 p-8 md:pt-20 md:p-5 gap-10">
+			<div className="w-full flex justify-center mt-5">
 				<span className="text-cyan-500 font-bold text-4xl">
 					<span className=" text-black">{`P`}</span>ROJECTS
 				</span>

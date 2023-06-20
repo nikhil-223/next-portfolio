@@ -128,7 +128,7 @@ input[name='name'],input[name='email'] {
 		padding: 2em 3em;
 	}
 	.contact-form {
-		padding:3em 3em;
+		padding:3em 2em;
 		font-size: 1.1em;
 		width: 100%;
 		display: flex;

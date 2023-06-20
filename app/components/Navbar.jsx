@@ -20,7 +20,7 @@ const Navbar = () => {
 	return (
 		<nav
 			id="navbar"
-			className={`flex fixed pt-2 items-center justify-between w-full p-1 px-5 z-50 transition ${
+			className={`flex fixed pt-2 items-center justify-between w-full p-1 px-5 z-50 transition-all ${
 				pathname !== "/" && "bg-white shadow"
 			}`}>
 			<Link href="/" className="flex gap-2 items-center">
