@@ -27,7 +27,7 @@ const page = () => {
 
 			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
 				{project.detailedImgURL.map((item, index) => (
-					<div className="project-image w-full md:overflow-hidden sm:overflow-scroll flex justify-center">
+					<div className="project-image w-full md:overflow-hidden sm:overflow-scroll md:flex md:justify-center">
 						<div
 							key={index}
 							className=" relative aspect-6/4 md:w-11/12 sm:w-width_double  rounded-xl overflow-hidden md:mx-5 mt-5 ">
