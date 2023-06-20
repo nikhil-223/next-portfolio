@@ -31,7 +31,7 @@ const page = () => {
 					<div className="project-image w-full md:overflow-hidden sm:overflow-scroll md:flex md:justify-center">
 						<div
 							key={index}
-							className=" relative aspect-6/4 md:w-11/12 sm:w-width_double  rounded-xl overflow-hidden md:mx-5 mt-5 ">
+							className=" relative aspect-6/4 md:w-8/12 sm:w-width_double  rounded-xl overflow-hidden md:mx-5 mt-5 ">
 							<a
 								href={project.projectURL}
 								className="flex gap-2 items-center"
