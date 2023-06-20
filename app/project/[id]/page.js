@@ -3,6 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { BiLink } from "react-icons/bi";
+import {IoMdArrowRoundBack} from 'react-icons/io'
 
 import projects from "@/utils/projects";
 import Image from "next/image";
@@ -20,8 +21,8 @@ const page = () => {
 		<div className="flex flex-col gap-3 p-5 md:p-10 min-h-screen h-auto bg-white">
 			<div className="pt-10  flex justify-between items-center">
 				<span className="text-3xl font-extrabold">{project.projectName}</span>
-				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 text-white">
-					<Link href="/"> Back</Link>
+				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 bg-opacity-20 text-black">
+					<Link href="/"> <IoMdArrowRoundBack/></Link>
 				</div>
 			</div>
 

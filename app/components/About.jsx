@@ -39,8 +39,8 @@ const About = () => {
 			className=" flex flex-col relative w-full h-auto  pt-12 p-8 md:p-20 overflow-hidden">
 			<div className="flex flex-col items-center gap-10 mt-5 justify-center">
 				<div className="flex text-4xl font-extrabold ">
-					<span className="">{`A`}</span>BOUT
-					<span className="">{`M`}</span>E
+					<span className=" text-teal-600">{`A`}</span>BOUT
+					<span className="ml-3 text-teal-600">{`M`}</span>E
 				</div>
 				<div className="flex md:flex-row sm:flex-col gap-6 ">
 					<div className="md:w-1/2 sm:w-full sm:px-3 md:px-6 flex flex-col gap-5">

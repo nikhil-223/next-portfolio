@@ -71,7 +71,7 @@ const Home = (props) => {
 	});
 
 	return (
-		<section id="home" className="relative pt-12 h-section w-full">
+		<section id="home" className="relative pt-12 md:h-section h-screen w-full">
 			<div id="navtrack" className="absolute top-0 invisible text-xs">
 				navtrack
 			</div>

@@ -6,8 +6,8 @@ const NavListItem = ({ href, label, isActive, icon:Icon }) => {
 	return (
 		<>
 			<li
-				className={`md:flex sm:hidden hover:opacity-80 ${
-					isActive && "text-cyan-700"
+				className={`md:flex sm:hidden hover:text-opacity-100 ${
+					isActive? "text-cyan-700 text-opacity-100": "text-black text-opacity-75"
 				}`}>
 				<a href={href}> {label}</a>
 			</li>

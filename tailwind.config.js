@@ -25,7 +25,8 @@ module.exports = {
 				color1: "rgb(245 136 136)",
 			},
 			height: {
-				section: "calc( 100vh + 1rem)",
+				// section: "calc( 100vh + 1rem)",
+				section: "47rem",
 				ul: "45rem",
 			},
 			width: {
