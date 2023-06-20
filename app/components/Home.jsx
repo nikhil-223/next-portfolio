@@ -49,11 +49,11 @@ const Home = (props) => {
 				entries.forEach((entry, index) => {
 					if (entry.isIntersecting === false) {
 						document.querySelector("#navbar").style.backgroundColor = "white";
-						document.querySelector("#navbar").style.top = "0rem";
+						document.querySelector("#navbar").style.top = "-0.2rem";
 						document.querySelector("#navbar").style.boxShadow =
 							"0px -1px 10px 0px rgba(71,70,87,1)";
 						} else {
-							document.querySelector("#navbar").style.top = "0.2rem";
+							document.querySelector("#navbar").style.top = "0rem";
 							document.querySelector("#navbar").style.backgroundColor =
 							"transparent";
 							document.querySelector("#navbar").style.boxShadow =
