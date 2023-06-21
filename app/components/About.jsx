@@ -79,7 +79,7 @@ const About = () => {
 						</div>
 					</div>
 
-					<hr className="sm:block md:hidden bg-black opacity-50" />
+					<hr className="sm:block md:hidden bg-black opacity-70" />
 
 					<div className="md:w-1/2 sm:w-full px-5 md:px-12 flex flex-col relative gap-5">
 						<div className="font-bold text-2xl">My Skills</div>
