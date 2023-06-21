@@ -22,7 +22,10 @@ const page = () => {
 			<div className="pt-12 pb-1  flex justify-between items-center">
 				<span className="text-2xl font-extrabold">{project.projectName}</span>
 				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 bg-opacity-20 text-black">
-					<Link href="/"> <IoMdArrowRoundBack/></Link>
+					<Link href="/">
+						{" "}
+						<IoMdArrowRoundBack />
+					</Link>
 				</div>
 			</div>
 
@@ -44,7 +47,7 @@ const page = () => {
 					</div>
 				))}
 
-				<hr/>
+				<hr />
 
 				{/* bullet points */}
 				<div className="flex w-full flex-col justify-between items-start gap-4 ">
@@ -54,28 +57,26 @@ const page = () => {
 								.slice(0, Math.ceil(project.shortDesc.length / 2) + 1)
 								.map((item, index) => (
 									<li key={index} className=" flex flex-col items-start">
-										<span className="text-lg font-bold flex gap-1 items-center">
+										<span className="text-sm font-bold flex gap-1 items-center">
 											<span className="text-xl">{"•"}</span>
 											{item.split(":")[0]}
 											{" :"}
 										</span>
-										<span className=" ml-4 text-lg ">{item.split(":")[1]}</span>{" "}
+										<span className=" ml-4 text-sm ">{item.split(":")[1]}</span>{" "}
 									</li>
 								))}
 						</ul>
-						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
+						<ul className="w-full flex flex-col flex-wrap items-start gap-2 sm:mt-2 md:mt-0 ">
 							{project.shortDesc
 								.slice(Math.ceil(project.shortDesc.length / 2) + 1)
 								.map((item, index) => (
-									<li
-										key={index}
-										className=" text-xl flex flex-col items-start">
-										<span className="font-bold flex gap-1 items-center">
-											<span className="text-3xl">{"•"}</span>
+									<li key={index} className=" flex flex-col items-start">
+										<span className="text-sm font-bold flex gap-1 items-center">
+											<span className="text-xl">{"•"}</span>
 											{item.split(":")[0]}
 											{" :"}
 										</span>
-										<span className=" ml-4 text-lg ">{item.split(":")[1]}</span>{" "}
+										<span className=" ml-4 text-sm ">{item.split(":")[1]}</span>{" "}
 									</li>
 								))}
 						</ul>
@@ -83,12 +84,12 @@ const page = () => {
 
 					{/* toolsUsed */}
 					<div className=" mb-5 p-2 px-3 pb-4 bg-red-200 rounded-lg w-full">
-						<h1 className="font-bold text-xl mb-3 text-teal-950">
-							Tools Used
-						</h1>
+						<h1 className="font-bold text-xl mb-3 text-teal-950">Tools Used</h1>
 						<div className=" flex flex-wrap gap-2">
 							{project.toolsUsed.map((item, index) => (
-								<span key={index} className="py-1 text-lg px-3 bg-color1 rounded-md">
+								<span
+									key={index}
+									className="py-1 text-lg px-3 bg-color1 rounded-md">
 									{item}
 								</span>
 							))}
