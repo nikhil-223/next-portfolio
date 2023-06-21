@@ -120,7 +120,7 @@ const Home = (props) => {
 								Hey, I'm{" "}
 							</motion.h6>{" "}
 							<motion.h3
-								className="text-center font-extrabold sm:text-5xl md:text-6xl"
+								className="text-center font-extrabold sm:text-4xl md:text-6xl"
 								variants={infoChildVariants}>
 								Nikhil Shekhawat
 							</motion.h3>{" "}

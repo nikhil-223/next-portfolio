@@ -43,8 +43,8 @@ const About = () => {
 					<span className="ml-3 text-teal-600">{`M`}</span>E
 				</div>
 				<div className="flex md:flex-row sm:flex-col gap-6 ">
-					<div className="md:w-1/2 sm:w-full sm:px-3 md:px-6 flex flex-col gap-5">
-						<ul className="text-lg list-disc flex flex-col gap-2 ">
+					<div className="md:w-1/2 sm:w-full sm:px-3 sm:pb-3 md:pb-0 md:px-6 flex flex-col gap-5">
+						<ul className="md:text-lg sm:text-sm  list-disc flex flex-col gap-2 ">
 							<li>
 								As a passionate <b>Full-stack Web Developer</b> I'm dedicated to
 								creating innovative and user-friendly web applications.
@@ -78,6 +78,8 @@ const About = () => {
 							</a>
 						</div>
 					</div>
+
+					<hr className="sm:block md:hidden bg-black opacity-50" />
 
 					<div className="md:w-1/2 sm:w-full px-5 md:px-12 flex flex-col relative gap-5">
 						<div className="font-bold text-2xl">My Skills</div>

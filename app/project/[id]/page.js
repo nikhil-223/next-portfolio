@@ -19,12 +19,14 @@ const page = () => {
 
 	return (
 		<div className="flex flex-col gap-3 p-5 md:p-10 min-h-screen h-auto bg-white">
-			<div className="pt-10  flex justify-between items-center">
-				<span className="text-3xl font-extrabold">{project.projectName}</span>
+			<div className="pt-12 pb-1  flex justify-between items-center">
+				<span className="text-2xl font-extrabold">{project.projectName}</span>
 				<div className="text-xl font-bold p-1 px-3 md:mx-5 rounded-lg bg-stone-600 bg-opacity-20 text-black">
 					<Link href="/"> <IoMdArrowRoundBack/></Link>
 				</div>
 			</div>
+
+			<hr />
 
 			<div className="flex flex-col justify-between items-center text-xl h-auto w-full gap-5">
 				{project.detailedImgURL.map((item, index) => (
@@ -42,16 +44,18 @@ const page = () => {
 					</div>
 				))}
 
+				<hr/>
+
 				{/* bullet points */}
 				<div className="flex w-full flex-col justify-between items-start gap-4 ">
-					<div className="flex sm:flex-col md:flex-row px-3 py-5 bg-gray-50 border w-full rounded-lg">
+					<div className="flex sm:flex-col md:flex-row px-3 py-5 w-full rounded-lg">
 						<ul className="w-full flex flex-col flex-wrap items-start gap-2 ">
 							{project.shortDesc
 								.slice(0, Math.ceil(project.shortDesc.length / 2) + 1)
 								.map((item, index) => (
-									<li key={index} className="text-xl flex flex-col items-start">
-										<span className="font-bold flex gap-1 items-center">
-											<span className="text-3xl">{"•"}</span>
+									<li key={index} className=" flex flex-col items-start">
+										<span className="text-lg font-bold flex gap-1 items-center">
+											<span className="text-xl">{"•"}</span>
 											{item.split(":")[0]}
 											{" :"}
 										</span>
@@ -78,13 +82,13 @@ const page = () => {
 					</div>
 
 					{/* toolsUsed */}
-					<div className=" mb-5 p-3 pb-4 bg-red-200 rounded-lg w-full">
-						<h1 className="font-bold text-2xl mb-4 text-teal-950">
+					<div className=" mb-5 p-2 px-3 pb-4 bg-red-200 rounded-lg w-full">
+						<h1 className="font-bold text-xl mb-3 text-teal-950">
 							Tools Used
 						</h1>
 						<div className=" flex flex-wrap gap-2">
 							{project.toolsUsed.map((item, index) => (
-								<span key={index} className="py-2 px-3 bg-color1 rounded-md">
+								<span key={index} className="py-1 text-lg px-3 bg-color1 rounded-md">
 									{item}
 								</span>
 							))}
@@ -98,7 +102,7 @@ const page = () => {
 								href={project.projectURL}
 								className="flex gap-2 items-center"
 								target="_blank">
-								<p className="text-2xl font-extrabold">Live</p>
+								<p className="text-xl font-extrabold">Live</p>
 								<BiLink />
 							</a>
 						</span>
@@ -107,7 +111,7 @@ const page = () => {
 								href={project.github}
 								className="flex gap-2 items-center"
 								target="_blank">
-								<p className="text-2xl font-extrabold">GitHub</p>
+								<p className="text-xl font-extrabold">GitHub</p>
 								<BiLink />
 							</a>
 						</span>
