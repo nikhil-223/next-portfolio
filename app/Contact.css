@@ -99,7 +99,7 @@ input[name='name'],input[name='email'] {
 .contact-links {
 	position: relative;
 	margin-top: 1em;
-	gap: 1em;
+	gap: 0.5em;
 	height: 5em;
 	display: flex;
 	justify-content: flex-start;
@@ -125,7 +125,15 @@ input[name='name'],input[name='email'] {
 		width: 93%;
 		margin: 2em auto;
 		height: auto;
-		padding: 2em 3em;
+		padding: 1.5em 2em;
+	}
+
+	.contact-me span:nth-child(2) {
+		font-size: 1.2em !important;
+	}
+	.contact-me span:nth-child(1) {
+		height: 1.3em !important;
+		font-size: 2em !important;
 	}
 	.contact-form {
 		padding:3em 2em;

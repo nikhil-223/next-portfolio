@@ -79,11 +79,11 @@ const About = () => {
 						</div>
 					</div>
 
-					<hr className="sm:block md:hidden bg-black opacity-70" />
+					<hr className="sm:block md:hidden bg-black opacity-80" />
 
 					<div className="md:w-1/2 sm:w-full px-5 md:px-12 flex flex-col relative gap-5">
 						<div className="font-bold text-2xl">My Skills</div>
-						<div className="flex flex-wrap gap-3 gap-x-4  z-20">
+						<div className="flex flex-wrap gap-2 gap-x-2  z-20">
 							{skills.map((item) => (
 								<Skill
 									key={item.skillName}
