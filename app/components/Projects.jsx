@@ -14,7 +14,7 @@ const Projects = () => {
 					<span className="text-cyan-700 ">{`P`}</span>ROJECTS
 				</span>
 			</div>
-			<div className="flex flex-wrap justify-around gap-5">
+			<div className="projectscroll flex sm:flex-wrap md:flex-nowrap h-auto md:h-96 md:overflow-x-scroll md:overflow-y-hidden gap-5 snap-x snap-mandatory justify-start">
 				{projects.map((item) => {
 					return (
 						<ProjectCard

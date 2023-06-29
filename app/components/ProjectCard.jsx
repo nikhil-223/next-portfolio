@@ -47,25 +47,25 @@ const ProjectCard = (props) => {
 			variants={projectVariants}
 			initial="hidden"
 			animate={controls}
-			className="relative project md:w-projectCard aspect-5/3 sm:w-full shadow-lg rounded-lg bg-white ">
+			className="relative snap-start project md:w-projectCard md:aspect-7/4 sm:aspect-4/3 sm:w-full shadow-lg rounded-lg bg-white ">
 			<Link href={`project/${projectName}`}>
 				<div className="absolute rounded-lg overflow-hidden w-full h-full">
 					<Image src={imgURL} fill alt={projectName} />
-					{projectStatus !== "" && (
-						<span className=" absolute p-1 bg-red-400 z-20 right-1 bottom-2 scale-75 rounded">
-							{projectStatus}
-						</span>
-					)}
 				</div>
 				<div className="absolute w-full h-full rounded-lg bg-gradient-bw" />
-				<div className="absolute flex justify-between py-3 z-10">
+				<div className="absolute  w-full h-full transition-all flex justify-between py-3 z-10 hover:scale-110 origin-top-left">
 					<div className="flex flex-col mt-10 ml-4 mr-10">
-						<span className="text-5xl font-extrabold text-pink-600">
+						<span className="sm:text-4xl md:text-5xl font-extrabold text-pink-600">
 							{projectName}
 						</span>
-						<span className="text-3xl font-extrabold text-white">
+						<span className="sm:text-2xl md:text-3xl font-extrabold text-white">
 							{aboutProject}
 						</span>
+						{projectStatus !== "" && (
+							<span className="text-white z-20">
+								{projectStatus}
+							</span>
+						)}
 					</div>
 					{/* <div className="flex gap-2 px-2 text-2xl">
 						<a href={projectURL} target="blank">
