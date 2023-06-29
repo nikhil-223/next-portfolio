@@ -11,6 +11,8 @@ module.exports = {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
 					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+				"gradient-bw":
+					"linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,56,91,0.7708333333333334) 34%, rgba(0,224,255,0) 100%)",
 			},
 			fontFamily: {
 				poppins: "Poppins , sans-serif",
@@ -30,8 +32,8 @@ module.exports = {
 				ul: "45rem",
 			},
 			width: {
-				projectCard: "28rem",
-				width_double:"200%"
+				projectCard: "32rem",
+				width_double: "200%",
 			},
 			transitionDuration: {
 				2000: "2000ms",
@@ -39,6 +41,7 @@ module.exports = {
 			aspectRatio: {
 				"4/3": "4 / 3",
 				"6/4": "6 / 4",
+				"5/3": "5 / 3",
 			},
 		},
 		screens: {

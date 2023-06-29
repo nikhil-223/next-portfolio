@@ -44,12 +44,12 @@ const ProjectCard = (props) => {
 	return (
 		<motion.div
 			ref={ref}
-            variants={projectVariants}
-            initial= 'hidden'
-            animate={controls}
-			className="project md:w-projectCard aspect-4/3 sm:w-full p-4 shadow-lg rounded-lg bg-white ">
-			<Link href={`project/${projectName}`} >
-				<div className="relative rounded-lg overflow-hidden w-full h-4/5 border-[3px] border-stone-100">
+			variants={projectVariants}
+			initial="hidden"
+			animate={controls}
+			className="relative project md:w-projectCard aspect-5/3 sm:w-full shadow-lg rounded-lg bg-white ">
+			<Link href={`project/${projectName}`}>
+				<div className="absolute rounded-lg overflow-hidden w-full h-full">
 					<Image src={imgURL} fill alt={projectName} />
 					{projectStatus !== "" && (
 						<span className=" absolute p-1 bg-red-400 z-20 right-1 bottom-2 scale-75 rounded">
@@ -57,22 +57,26 @@ const ProjectCard = (props) => {
 						</span>
 					)}
 				</div>
-			</Link>
-
-			<div className="flex justify-between py-3">
-				<div className="flex flex-col ml-3">
-					<span className="font-bold">{projectName}</span>
-					<span className="text-sm">{aboutProject}</span>
+				<div className="absolute w-full h-full rounded-lg bg-gradient-bw" />
+				<div className="absolute flex justify-between py-3 z-10">
+					<div className="flex flex-col mt-10 ml-4 mr-10">
+						<span className="text-5xl font-extrabold text-pink-600">
+							{projectName}
+						</span>
+						<span className="text-3xl font-extrabold text-white">
+							{aboutProject}
+						</span>
+					</div>
+					{/* <div className="flex gap-2 px-2 text-2xl">
+						<a href={projectURL} target="blank">
+							<HiExternalLink />
+						</a>
+						<a href={github}>
+							<AiOutlineCodeSandbox />
+						</a>
+					</div> */}
 				</div>
-				{/* <div className="flex gap-2 px-2 text-2xl">
-					<a href={projectURL} target="blank">
-						<HiExternalLink />
-					</a>
-					<a href={github}>
-						<AiOutlineCodeSandbox />
-					</a>
-				</div> */}
-			</div>
+			</Link>
 		</motion.div>
 	);
 };
